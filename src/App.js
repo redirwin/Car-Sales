@@ -12,11 +12,13 @@ import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
 class App extends React.Component {
-  addFeature = item => {
-    // dipsatch an action here to add an item
+  addItem = feature => {
+    // dipatch an action here to add an item
+    // console.log(feature);
+    addFeature(feature);
   };
 
-  removeFeature = item => {
+  removeItem = item => {
     // dispatch an action here to remove an item
   };
 
@@ -25,10 +27,10 @@ class App extends React.Component {
       <div className="boxes">
         <div className="box">
           <Header car={this.props.car} />
-          <AddedFeatures car={this.props.car} />
+          <AddedFeatures car={this.props.car} removeItem={this.removeItem} />
         </div>
         <div className="box">
-          <AdditionalFeatures store={this.props.store} />
+          <AdditionalFeatures store={this.props.store} addItem={this.addItem} />
           <Total
             car={this.props.car}
             additionalPrice={this.props.additionalPrice}
