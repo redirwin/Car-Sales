@@ -11,7 +11,7 @@ class App extends React.Component {
     // dispatch an action here to remove an item
   };
 
-  buyItem = item => {
+  addFeature = item => {
     // dipsatch an action here to add an item
   };
 
