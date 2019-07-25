@@ -1,18 +1,23 @@
 import React from "react";
 import { connect } from "react-redux";
 
+// import actions
+import { addFeature } from "./actions/actions";
+import { removeFeature } from "./actions/actions";
+
+// import components
 import Header from "./components/Header";
 import AddedFeatures from "./components/AddedFeatures";
 import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
 class App extends React.Component {
-  removeFeature = item => {
-    // dispatch an action here to remove an item
-  };
-
   addFeature = item => {
     // dipsatch an action here to add an item
+  };
+
+  removeFeature = item => {
+    // dispatch an action here to remove an item
   };
 
   render() {
@@ -44,5 +49,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {}
+  { addFeature, removeFeature }
 )(App);
