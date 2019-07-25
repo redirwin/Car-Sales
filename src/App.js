@@ -13,14 +13,10 @@ import Total from "./components/Total";
 
 class App extends React.Component {
   addItem = feature => {
-    // dipatch an action here to add an item
-    // console.log(feature);
     addFeature(feature);
   };
 
-  removeItem = item => {
-    // dispatch an action here to remove an item
-  };
+  removeItem = feature => {};
 
   render() {
     return (
