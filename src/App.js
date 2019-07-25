@@ -12,8 +12,12 @@ import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   addItem = feature => {
-    addFeature(feature);
+    this.props.addFeature(feature);
   };
 
   removeItem = feature => {};
